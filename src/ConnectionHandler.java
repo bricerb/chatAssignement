@@ -30,9 +30,8 @@ public class ConnectionHandler implements Runnable{
 
             String inputLine;
             while ((inputLine = clientInput.readLine()) != null) {
-                System.out.println("Received message: " + inputLine + " from " + incClient.toString());
+//                System.out.println("Received message: " + inputLine + " from " + incClient.toString());
                 chatDisplay.println(chatDisplay);
             }
     }
-
 }

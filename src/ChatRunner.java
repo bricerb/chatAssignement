@@ -9,5 +9,4 @@ public class ChatRunner {
         Server myServer = new Server();
         myServer.startServer();
     }
-
 }
