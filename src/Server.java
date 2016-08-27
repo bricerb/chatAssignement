@@ -16,7 +16,7 @@ public class Server {
     public void startServer() {
         try {
             System.out.println("Starting Server");
-            ServerSocket listener = new ServerSocket(8024);
+            ServerSocket listener = new ServerSocket(8080);
 
             while(true) {
                 Socket incConnection = listener.accept();

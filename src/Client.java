@@ -16,11 +16,20 @@ public class Client {
         System.out.println("Running");
 
         try {
-            Socket clientSocket = new Socket("localhost", 8024);
-//            Socket clientSocket = new Socket("10.0.0.126", 8024);
+            Socket clientSocket = new Socket("localhost", 8080);
+//            Socket clientSocket = new Socket("10.0.0.126", 8024); // Rebecca
+//            Socket clientSocket = new Socket ("10.0.0.136", 8080); //Jessica
+//            Socket clientSocket = new Socket ("10.0.0.136", 8080); //Yehea
 
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+            System.out.println("Type exit to exit.");
+            System.out.println("Please enter your User Name");
+            String nameInput = inputScanner.nextLine();
+            out.println("name=" + nameInput);
+
+//            String clientMessage = ("name=" + inputScanner.nextLine());
 
             while(true) {
                 String clientMessage = inputScanner.nextLine();
@@ -28,10 +37,11 @@ public class Client {
                     break;
                 }
                 out.println(clientMessage);
+//                out.println(in.readLine());
 
 //            out.println("I regret nothing... IN BRICE WE TRUST");
 
-                String serverRespone = in.readLine();
+//                String serverRespone = in.readLine();
             }
 
             clientSocket.close();
