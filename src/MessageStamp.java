@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class MessageStamp {
 
     private String userName;
-    private LocalDateTime timeStamp;
+    private LocalDateTime timeStamp = LocalDateTime.now();
     private String message;
 
     public String getUserName() {

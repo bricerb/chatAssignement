@@ -16,10 +16,13 @@ public class Client {
         System.out.println("Running");
 
         try {
-            Socket clientSocket = new Socket("localhost", 8080);
+//            Socket clientSocket = new Socket("localhost", 8080);
 //            Socket clientSocket = new Socket("10.0.0.126", 8024); // Rebecca
 //            Socket clientSocket = new Socket ("10.0.0.136", 8080); //Jessica
-//            Socket clientSocket = new Socket ("10.0.0.136", 8080); //Yehea
+            Socket clientSocket = new Socket ("10.0.0.138", 8080); //Yehia
+//            Socket clientSocket = new Socket ("10.0.0.132", 8585); //Donald
+            System.out.println("Connected to Server");
+
 
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -37,6 +40,7 @@ public class Client {
                     break;
                 }
                 out.println(clientMessage);
+                System.out.println(in.readLine());
 //                out.println(in.readLine());
 
 //            out.println("I regret nothing... IN BRICE WE TRUST");
